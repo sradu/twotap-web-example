@@ -1,0 +1,18 @@
+<form id='ttForm' method='post' action='https://checkout.twotap.com'>
+  <input type='hidden' id='public_token' name='public_token' value='PUBLIC_TOKEN'/>
+  <input type='hidden' name='unique_token' value='AN UNIQUE RANDOM'/>
+  <input type='hidden' name='callback_url' value='http://MY_IP/purchase_confirm_callback' />
+
+  <input type='hidden' name='custom_css_url' value='http://MY_IP/stylesheets/integration_twotap.css' />
+
+  <input type='hidden' name="input_fields" value='' />
+
+  <input type='hidden' name='products' value='<%- JSON.stringify(products) %>' />
+</form>
+
+
+<script type='text/javascript'>
+  var publicToken = '<%- publicToken %>';
+  document.getElementById('public_token').value = publicToken;
+  document.getElementById('ttForm').submit();
+</script>

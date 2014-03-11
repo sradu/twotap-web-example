@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <% include head %>
+
+  <body>
+
+    <div class='tt-body'>
+      <h3>Two Tap Integration Example</h3>
+
+      <p>This is a very simple Two Tap Web Integration.</p>
+
+      <p class='add-to-cart-container'><a href='#' onclick='addToCart(); return false;'>Add a product to the cart.</a></p>
+    </div>
+
+    <div class='tt-side'>
+      <a href='#' onclick='showTwoTap(); return false'>1 item</a>
+    </div>
+
+    <div class='tt-overlayer'></div>
+
+    <div class='tt-iframe'>
+      <iframe id='ttIframe' src='#' width='400px' height='100%'></iframe>
+    </div>
+
+    <script type='text/javascript'>
+
+      function addToCart() {
+        $('.add-to-cart-container').hide();
+        $('.tt-side').show().addClass('animated bounceInRight')
+      }
+        
+      function showTwoTap() {
+        $('.tt-side').removeClass('bounceInRight').addClass('bounceOutLeft');
+
+        // product urls must be escaped and separated by ','
+        var productUrl = escape('http://www.nastygal.com/clothes-dresses/bed-of-roses-dress');
+        var iframeSrc = 'http://localhost:2500/integration_iframe?product=' + productUrl;
+        $('#ttIframe').attr('src', iframeSrc);
+
+        $('.tt-iframe').show().addClass('animated slideInRight');
+        $('.tt-overlayer').fadeIn();
+      }
+    </script>
+  </body>
+</html>

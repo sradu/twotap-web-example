@@ -1,0 +1,45 @@
+body, html {
+  background: #fff;
+}
+
+a {
+  color: #ff696b;
+}
+
+.header-container {
+  background: #7fc7af;
+}
+
+.btn-blue {
+  background: #ff696b;
+}
+.btn-blue:hover {
+  background: #f16568; 
+}
+
+.checkout-info {
+  background: #fbf5e3;
+}
+
+.checkout-info .your-wallet {
+  color: #517370;
+  text-shadow: none;
+}
+.checkout-info .wallet-cvv .cvv-title {
+  color: #517370; 
+  text-shadow: none;
+}
+.checkout-info .wallet-cvv .cvv-subtitle {
+  color: #444;  
+}
+
+.checkout-info .generic-info {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.generic-info.with-bottom-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.checkout-info .generic-info .new-link .img-holder {
+  color: #3fb8af;
+}
