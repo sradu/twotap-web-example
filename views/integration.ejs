@@ -18,8 +18,11 @@
 
     <div class='tt-overlayer'></div>
 
-    <div class='tt-iframe'>
-      <iframe id='ttIframe' src='#' width='400px' height='100%'></iframe>
+    <div class='tt-iframe-container'>
+      <div class='tt-iframe'>
+        <div class='tt-iframe-close'><a href='#' onclick='closeTwoTap(); return false;'>close</a></div>
+        <iframe id='ttIframe' src='#' width='400px' height='100%'></iframe>
+      </div>
     </div>
 
     <script type='text/javascript'>
@@ -30,7 +33,7 @@
       }
         
       function showTwoTap() {
-        $('.tt-side').removeClass('bounceInRight').addClass('bounceOutLeft');
+        $('.tt-side').removeClass('bounceInRight').addClass('bounceOutRight');
 
         // product urls must be escaped and separated by ','
         var productUrl = escape('http://www.nastygal.com/clothes-dresses/bed-of-roses-dress');
@@ -39,6 +42,13 @@
 
         $('.tt-iframe').show().addClass('animated slideInRight');
         $('.tt-overlayer').fadeIn();
+      }
+
+      function closeTwoTap() {
+        $('.tt-iframe').removeClass('slideInRight').addClass('slideOutRight');
+        $('.tt-overlayer').fadeOut();
+
+        $('.tt-side').removeClass('bounceOutRight').addClass('bounceInRight');
       }
     </script>
   </body>

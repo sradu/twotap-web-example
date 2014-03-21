@@ -5,12 +5,12 @@
 .tt-side {
   position: fixed;
   right: -6px;
-  top: 250px;
+  top: 100px;
   padding: 5px 15px 5px 5px;
   background: #ff696b;
   z-index: 9999999999;
-  display: none;
   border-radius: 5px;
+  display: none;
 }
 
 .tt-side a {
@@ -39,9 +39,8 @@
   display: none;
 }
 
-#ttIframe {
-  border: none;
-  box-shadow: 0 0 2px rgba(0,0,0, 0.65);
+.tt-iframe-container {
+  position: relative;
 }
 .tt-iframe {
   position: fixed;
@@ -51,4 +50,32 @@
   right: 0;
   z-index: 9999999999;
   display: none;
+}
+.tt-iframe-close {
+  position: absolute;
+  top: 100px;
+  left: -90px;
+  padding: 5px 15px 5px 5px;
+  background: #ff696b;
+  border-radius: 5px;
+  width: 80px;
+  z-index: 999;
+}
+.tt-iframe-close a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Montserrat', Helvetica, Verdana, Arial, sans-serif;
+  background: url('/images/integration/integration-cart.png') 5px 3px no-repeat;
+  padding-left: 30px;
+  line-height: 30px;
+}
+#ttIframe {
+  border: none;
+  box-shadow: 0 0 2px rgba(0,0,0, 0.65);
+  background: #fff;
+  z-index: 9999;
+  position: relative;
 }
