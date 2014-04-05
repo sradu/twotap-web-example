@@ -1,0 +1,25 @@
+.header-container {
+  background: #836595;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.header-container header {
+  padding-top: 25px;
+}
+
+.header-container header .header-button {
+  top: 30px;
+}
+
+.amber-container {
+  padding-top: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+#mAmber {
+  padding-top: 15px;
+}
