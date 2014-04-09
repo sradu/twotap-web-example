@@ -13,7 +13,9 @@ exports.integrationIframe = function(req, res) {
   var publicToken = req.app.settings.public_token;
   var customCSSURL = req.query.custom_css_url || 'http://localhost:2500/stylesheets/integration_twotap.css';
 
-  res.render('integration_iframe', { products: [ productUrl ], publicToken: publicToken, customCSSURL: customCSSURL });
+  res.render('integration_iframe', { productsJSON: JSON.stringify([ productUrl ]).replace(/'/g, "\\'"), 
+                                     publicToken: publicToken, 
+                                     customCSSURL: customCSSURL });
 };
 
 
