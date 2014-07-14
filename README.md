@@ -2,6 +2,8 @@
 
 This is a very simple example of integrating Two Tap on a desktop website. It uses nodejs as the backend server.
 
+You don't have to use this component. Feel free to embed Two Tap directly inside your existing platform (rails/django/anything).
+
 ## Install
 
 * git clone this repository
@@ -16,9 +18,10 @@ When the shopper confirms the purchase a [callback](https://twotap.com/docs#mobi
 ## Interesting files
 
 * app.js (set up a PUBLIC_TOKEN, PRIVATE_TOKEN)
-* integration_iframe.ejs (this is called to startup the Two Tap HTML5 interface, you will see how to pass different variables)
-* integration.ejs / integration.css (some UI suggestions)
+* views/integration_iframe.ejs (this is called to startup the Two Tap HTML5 interface, you will see how to pass different variables)
+* views/integration.ejs / integration.css (some UI suggestions)
+* routes/integrations.js / purchaseConfirmCallback method
 
 ## Questions?
 
-Write to us at support@twotap.com
+Write to us at support@twotap.com.
