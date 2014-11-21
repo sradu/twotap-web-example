@@ -35,7 +35,7 @@ if (app.get('env') === 'development') {
   app.set('own_url', 'http://localhost:2500');
   app.set('mobile_url', 'https://checkout.twotap.com');
   app.set('api_url', 'https://api.twotap.com');
-  app.set('public_token', '6ad2af4e0e1e2fb08de9');
+  app.set('public_token', 'TWOTAP_PUBLIC_TOKEN');
   app.set('private_token', 'TWOTAP_PRIVATE_TOKEN');
 
   app.use(function(err, req, res, next) {
@@ -54,7 +54,7 @@ if (app.get('env') === 'production') {
   app.set('own_url', 'http://localhost:2500');
   app.set('mobile_url', 'https://checkout.twotap.com');
   app.set('api_url', 'https://api.twotap.com');
-  app.set('public_token', '6ad2af4e0e1e2fb08de9');
+  app.set('public_token', 'TWOTAP_PUBLIC_TOKEN');
   app.set('private_token', 'TWOTAP_PRIVATE_TOKEN');
 
   app.use(function(err, req, res, next) {
