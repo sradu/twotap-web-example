@@ -25,7 +25,7 @@ exports.purchaseConfirmCallback = function(req, res) {
   var testMode = req.body.test_mode;
   var privateToken = req.app.settings.private_token;
   
-  var callPath = '/v1.0/purchase_confirm?private_token=' + privateToken;
+  var callPath = '/v1.0/purchase/confirm?private_token=' + privateToken;
 
   request.post(apiURL + callPath, { form : { purchase_id: purchaseId, test_mode: testMode } }, function (error, response, body) {
     res.json(JSON.parse(body));
