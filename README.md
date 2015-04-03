@@ -7,7 +7,7 @@ You don't have to use this component. Feel free to embed Two Tap directly inside
 ## Install
 
 * git clone this repository
-* npm install ejs express
+* npm install
 * edit app.js and add your own Two Tap PUBLIC_TOKEN and PRIVATE_TOKEN
 * node app.js and visit http://localhost:2500
 
